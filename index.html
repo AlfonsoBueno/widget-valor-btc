@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto valores</title>
+
+    <script src="https://kit.fontawesome.com/1c44cb9844.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="app app--valorbtc" id="app">
+            
+            <p>Precio del Bitcoin (BTC) a fecha <span id="fechaactual"></span></p>
+            <div class="app--precio" id="precio-crypto">-</div>
+
+
+            <!-- boton cambiar moneda -->
+            <div class="btn--moneda">
+                <input class="tgl tgl-flip" id="btn--moneda" type="checkbox"/>
+                <label class="tgl-btn" data-tg-off="USD" data-tg-on="EUR" for="btn--moneda"></label>
+            </div>
+            <!-- .boton cambiar moneda -->
+
+            <div class="app-iconobtcgrande"><i class="fab fa-bitcoin"></i></div>
+
+        </div>
+
+
+        <div class="app app--grafica" id="app--grafica">
+
+            <div class="app--grafica app--grafica--textocabecera">Valor del BTC en los últimos días</div>
+
+            <div class="grafica" id="grafica--valores">
+                <canvas id="migrafica"></canvas>
+            </div>
+
+            
+            <!-- boton cambiar valor moneda en gráfica -->
+            <div class="btn--moneda--grafica">
+                <input class="tgl tgl-flip" id="btn--monedagrafica" type="checkbox" title="Pulsa para cambiar de valor entre Euros y Dólares" />
+                <label class="tgl-btn" data-tg-off="USD" data-tg-on="EUR" for="btn--monedagrafica"></label>
+            </div>
+            <!-- .boton cambiar valor moneda en gráfica -->
+        </div>
+
+    </div> <!-- .Final del container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
